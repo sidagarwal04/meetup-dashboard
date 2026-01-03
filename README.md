@@ -66,17 +66,17 @@ NEXT_PUBLIC_SUMMARY_SHEET="Consolidated Dashboard"
 **Note:** Events sheets are automatically detected - no need to configure them!
 
 3. **Run Development Server**
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 Open [http://localhost:3000](http://localhost:3000)
 
 4. **Build for Production**
-\`\`\`bash
+```bash
 npm run build
 npm start
-\`\`\`
+```
 
 ## 📋 Google Sheets Setup
 
@@ -101,23 +101,23 @@ Your spreadsheet should contain the following tabs:
 #### Sheet Structures:
 
 **UG+Regions Sheet** (Groups):
-\`\`\`
+```
 Timestamp | User Group Name | Member Count | City | Region | Past RSVPs | Past Event Count | ...
-\`\`\`
+```
 
 **Events YYYY Sheets**:
-\`\`\`
+```
 Timestamp | Meetup Title | Meetup URL | Meetup Date | Meetup Group Name | Meetup City | RSVP Count | Meetup Type
-\`\`\`
+```
 
 **Important:** 
-- Meetup Type should be: \`Physical\`, \`Online\`, or \`Hybrid\`
+- Meetup Type should be: `Physical`, `Online`, or `Hybrid`
 - Make your spreadsheet **publicly accessible** or share with API credentials
 
 ### 3. Get Your Configuration
 
 **Spreadsheet ID:**
-From URL: \`https://docs.google.com/spreadsheets/d/[SPREADSHEET_ID]/edit\`
+From URL: `https://docs.google.com/spreadsheets/d/[SPREADSHEET_ID]/edit`
 
 **Make Sheet Public:**
 1. Open your Google Sheet
@@ -126,7 +126,7 @@ From URL: \`https://docs.google.com/spreadsheets/d/[SPREADSHEET_ID]/edit\`
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 meetup-dashboard/
 ├── src/
 │   ├── app/
@@ -152,7 +152,7 @@ meetup-dashboard/
 ├── tsconfig.json
 ├── tailwind.config.js
 └── next.config.js
-\`\`\`
+```
 
 ## 🎨 Key Features Explained
 
@@ -185,14 +185,14 @@ The dashboard automatically:
 
 ### Vercel (Recommended)
 
-\`\`\`bash
+```bash
 npm install -g vercel
 vercel
-\`\`\`
+```
 
 Add environment variables in Vercel dashboard:
-- \`NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY\`
-- \`NEXT_PUBLIC_SPREADSHEET_ID\`
+- `NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY`
+- `NEXT_PUBLIC_SPREADSHEET_ID`
 
 ### Other Platforms
 
@@ -207,9 +207,9 @@ Supports any Next.js-compatible platform:
 
 ### Update Region Mappings
 
-Edit \`src/lib/sheetsService.ts\` → \`getRegionFromCity()\` function:
+Edit `src/lib/sheetsService.ts` → `getRegionFromCity()` function:
 
-\`\`\`typescript
+```typescript
 export function getRegionFromCity(city: string): string {
   const cityLower = city.toLowerCase();
   
@@ -217,13 +217,13 @@ export function getRegionFromCity(city: string): string {
   if (cityLower.includes('new york')) return 'AMER';
   // ...
 }
-\`\`\`
+```
 
 ### Modify Color Scheme
 
-Edit \`tailwind.config.js\`:
+Edit `tailwind.config.js`:
 
-\`\`\`javascript
+```javascript
 module.exports = {
   theme: {
     extend: {
@@ -233,12 +233,12 @@ module.exports = {
     }
   }
 }
-\`\`\`
+```
 
 ### Adjust Chart Display
 
-In \`src/app/page.tsx\`, modify:
-- \`membersByGroup\` - Change \`.slice(0, 10)\` to show more/fewer groups
+In `src/app/page.tsx`, modify:
+- `membersByGroup` - Change `.slice(0, 10)` to show more/fewer groups
 - Chart colors in ChartCard components
 - Grid layouts for responsive behavior
 
@@ -251,8 +251,8 @@ In \`src/app/page.tsx\`, modify:
 3. **Ensure sheets are public** or properly shared
 4. **Check spreadsheet ID** in \`.env\` file
 5. **Verify sheet tab names**:
-   - Must have \`UG+Regions\` tab
-   - Must have at least one \`Events YYYY\` tab
+   - Must have `UG+Regions` tab
+   - Must have at least one `Events YYYY` tab
 6. **Column names** must match expected format (case-insensitive)
 
 ### Year Statistics Showing 0
