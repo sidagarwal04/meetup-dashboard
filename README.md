@@ -80,7 +80,15 @@ npm start
 
 ## 📋 Google Sheets Setup
 
-### 1. Enable Google Sheets API
+### 1. Generate Your Spreadsheet
+
+This dashboard works best with Google Sheets generated using the MeetupPro AppScript Sync tool:
+
+**👉 [MeetupPro AppScript Sync](https://github.com/sidagarwal04/meetuppro-appscript-sync)**
+
+The script automatically syncs your Meetup.com Pro Network data to Google Sheets with the correct structure and formatting that this dashboard expects.
+
+### 2. Enable Google Sheets API
 
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
 2. Create a new project or select an existing one
@@ -88,7 +96,7 @@ npm start
 4. Create credentials → **API Key**
 5. (Recommended) Restrict the API key to Google Sheets API only
 
-### 2. Prepare Your Spreadsheet
+### 3. Prepare Your Spreadsheet
 
 Your spreadsheet should contain the following tabs:
 
@@ -124,7 +132,11 @@ From URL: `https://docs.google.com/spreadsheets/d/[SPREADSHEET_ID]/edit`
 2. Click "Share" → "Anyone with the link can view"
 3. Click "Done"
 
-## 📁 Project Structure
+## � Related Projects
+
+- **[MeetupPro AppScript Sync](https://github.com/sidagarwal04/meetuppro-appscript-sync)** - Google Apps Script to automatically sync Meetup.com Pro Network data to Google Sheets. Use this to generate the properly structured sheets for this dashboard.
+
+## �📁 Project Structure
 
 ```
 meetup-dashboard/
@@ -283,7 +295,7 @@ In `src/app/page.tsx`, modify:
 - **[Recharts](https://recharts.org/)** - Data visualization
 - **[Lucide React](https://lucide.dev/)** - Icons
 - **[date-fns](https://date-fns.org/)** - Date utilities
-- **[Google Sheets API v4](https://developers.google.com/sheets/api)** - Data source
+- * License - see the [LICENSE](LICENSE) file for details.*[Google Sheets API v4](https://developers.google.com/sheets/api)** - Data source
 
 ## 📄 License
 
