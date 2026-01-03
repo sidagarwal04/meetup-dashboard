@@ -35,10 +35,11 @@ A modern, responsive analytics dashboard for visualizing Meetup groups and event
 ### Installation
 
 1. **Clone and Install**
-\`\`\`bash
+```bash
+git clone https://github.com/sidagarwal04/meetup-dashboard.git
 cd meetup-dashboard
 npm install
-\`\`\`
+```
 
 2. **Configure Environment**
 
