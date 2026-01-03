@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # Disable secrets scanning for these non-sensitive values
+  # NEXT_PUBLIC_GROUPS_SHEETS contains sheet names (not secrets)
+  SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "AMER Dashboard,EMEA Dashboard,APAC Dashboard"
