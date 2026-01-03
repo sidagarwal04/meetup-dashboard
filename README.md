@@ -215,45 +215,6 @@ Supports any Next.js-compatible platform:
 - Azure Static Web Apps
 - Railway
 
-## ⚙️ Customization
-
-### Update Region Mappings
-
-Edit `src/lib/sheetsService.ts` → `getRegionFromCity()` function:
-
-```typescript
-export function getRegionFromCity(city: string): string {
-  const cityLower = city.toLowerCase();
-  
-  // Add your cities here
-  if (cityLower.includes('new york')) return 'AMER';
-  // ...
-}
-```
-
-### Modify Color Scheme
-
-Edit `tailwind.config.js`:
-
-```javascript
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        // Your custom colors
-      }
-    }
-  }
-}
-```
-
-### Adjust Chart Display
-
-In `src/app/page.tsx`, modify:
-- `membersByGroup` - Change `.slice(0, 10)` to show more/fewer groups
-- Chart colors in ChartCard components
-- Grid layouts for responsive behavior
-
 ## 🔧 Troubleshooting
 
 ### Data Not Loading
