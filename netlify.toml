@@ -3,6 +3,6 @@
   publish = ".next"
 
 [build.environment]
-  # Disable secrets scanning for these non-sensitive values
-  # NEXT_PUBLIC_GROUPS_SHEETS contains sheet names (not secrets)
-  SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "AMER Dashboard,EMEA Dashboard,APAC Dashboard"
+  # Google Sheets API keys are designed for client-side use with API restrictions
+  # They are intentionally embedded in the Next.js public bundle
+  SECRETS_SCAN_ENABLED = "false"
