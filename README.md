@@ -132,11 +132,11 @@ From URL: `https://docs.google.com/spreadsheets/d/[SPREADSHEET_ID]/edit`
 2. Click "Share" → "Anyone with the link can view"
 3. Click "Done"
 
-## � Related Projects
+## 🔗 Related Projects
 
 - **[MeetupPro AppScript Sync](https://github.com/sidagarwal04/meetuppro-appscript-sync)** - Google Apps Script to automatically sync Meetup.com Pro Network data to Google Sheets. Use this to generate the properly structured sheets for this dashboard.
 
-## �📁 Project Structure
+## 📁 Project Structure
 
 ```
 meetup-dashboard/
@@ -254,7 +254,7 @@ In `src/app/page.tsx`, modify:
 - Chart colors in ChartCard components
 - Grid layouts for responsive behavior
 
-## �� Troubleshooting
+## 🔧 Troubleshooting
 
 ### Data Not Loading
 
