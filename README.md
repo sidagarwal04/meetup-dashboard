@@ -63,6 +63,12 @@ NEXT_PUBLIC_GROUPS_SHEETS="AMER Dashboard,EMEA Dashboard,APAC Dashboard"
 NEXT_PUBLIC_SUMMARY_SHEET="Consolidated Dashboard"
 ```
 
+**⚠️ SECURITY WARNING:**
+- **NEVER commit `.env` files to Git** - they contain sensitive API keys
+- The `.env` file is already in `.gitignore` - keep it there!
+- For deployment platforms (Netlify, Vercel, etc.), add environment variables through their UI/dashboard
+- If you accidentally committed a secret, **rotate/regenerate it immediately** at [Google Cloud Console](https://console.cloud.google.com/)
+
 **Note:** Events sheets are automatically detected - no need to configure them!
 
 3. **Run Development Server**
@@ -195,6 +201,21 @@ The dashboard automatically:
 
 ## 🚀 Deployment
 
+### Netlify
+
+1. Push your code to GitHub (without any `.env` files)
+2. Connect your repository to Netlify
+3. **Add environment variables in Netlify dashboard:**
+   - Go to Site configuration → Environment variables
+   - Add each variable:
+     - `NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY`
+     - `NEXT_PUBLIC_SPREADSHEET_ID`
+     - `NEXT_PUBLIC_GROUPS_SHEETS`
+     - `NEXT_PUBLIC_SUMMARY_SHEET`
+4. Deploy!
+
+**⚠️ IMPORTANT:** Never commit `.env` files. Use Netlify's environment variables UI for all secrets.
+
 ### Vercel (Recommended)
 
 ```bash
@@ -205,15 +226,18 @@ vercel
 Add environment variables in Vercel dashboard:
 - `NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY`
 - `NEXT_PUBLIC_SPREADSHEET_ID`
+- `NEXT_PUBLIC_GROUPS_SHEETS`
+- `NEXT_PUBLIC_SUMMARY_SHEET`
 
 ### Other Platforms
 
 Supports any Next.js-compatible platform:
-- Netlify
 - AWS Amplify  
 - Google Cloud Run
 - Azure Static Web Apps
 - Railway
+
+**Always use the platform's environment variable settings** - never commit secrets to your repository.
 
 ## 🔧 Troubleshooting
 
