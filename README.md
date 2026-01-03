@@ -295,11 +295,11 @@ In `src/app/page.tsx`, modify:
 - **[Recharts](https://recharts.org/)** - Data visualization
 - **[Lucide React](https://lucide.dev/)** - Icons
 - **[date-fns](https://date-fns.org/)** - Date utilities
-- * License - see the [LICENSE](LICENSE) file for details.*[Google Sheets API v4](https://developers.google.com/sheets/api)** - Data source
+- **[Google Sheets API v4](https://developers.google.com/sheets/api)** - Data source
 
 ## 📄 License
 
-MIT
+[MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Contributing
 
